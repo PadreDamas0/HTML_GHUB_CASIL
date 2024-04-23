@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Form Example</title>
+</head>
+<body>
+
+    <form action="#" method="post">
+        Name: <input type="text" name="userName" required><br>
+        Email: <input type="email" name="userEmail" required><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="greeting" style="display:none;">
+        <h2>Thank you!</h2>
+        <p>We have received your information.</p>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('greeting').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
